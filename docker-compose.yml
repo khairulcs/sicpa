@@ -1,0 +1,10 @@
+web:
+  image: nginx
+  volumes:
+   - ./templates:/etc/nginx/templates
+   - ./khairul:/usr/share/nginx/html/khairul
+  ports:
+   - "80:80"
+  environment:
+   - NGINX_HOST=foobar.com
+   - NGINX_PORT=80
